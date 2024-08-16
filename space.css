@@ -119,6 +119,18 @@ Aqua - (0, 255, 255), Yellow - (255, 255, 0), Green - (0, 128, 0) */
     background: black;
 }
 
+.support_block {
+    position: absolute;
+    top: 165%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: black;
+}
+
 .plan {
     background: rgb(255, 255, 255);
     border: 1px solid rgb(221, 221, 221);
@@ -266,6 +278,15 @@ a {
         top: unset;
         width: 100%;
         margin-top: 1790px;
+    }
+
+    .support_block {
+        position: relative;
+        flex-direction: column;
+        height: auto;
+        top: unset;
+        width: 100%;
+        /* margin-top: 1790px; */
     }
 
     .plan {
