@@ -85,6 +85,11 @@ body {
 
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
+    body {
+        background-image: url("Dalle2.png");
+        background-size: auto auto;
+    }
+
     .container {
         grid-template-columns: 1fr;
     }

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI';
+    font-weight: bolder;
+    background-color: #e0dada;
+}
+
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.bets {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ea; /* заливка */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; Заполнение всей видимой высоты экрана */
+}
+
+.block_bets {
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px 0; /* Внешний отступ между блоками */
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: normal;
+}
+
+#winrate {
+    background: #9694e8;
+    font-weight: bolder;
+    margin: 0 0 5px 0;
+}
+
+#color_bets_green {
+    background-color: #8cc84b; /* Светло-зеленая заливка блока */
+}
+
+#color_bets_grey {
+    background-color: #c7c7c7; /* Серая заливка блока */
+}
+
+#color_bets_red {
+    background-color: #d18484; /* Красная заливка блока */
+}
+
+.separator {
+    border-top: 2px solid white; /* Горизонтальная линия */
+    margin: 10px 0; /* Внешний отступ между линией и содержимым блока */
+}
+
+.button_coef {
+    background-color: #fff; /* Цвет кнопки */
+    color: #000; /* Цвет текста на кнопке */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+}
+
+h5 img {
+    width: 20px;
+    margin: 5px;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .buttons {
+        justify-content: center;
+    }
+}
