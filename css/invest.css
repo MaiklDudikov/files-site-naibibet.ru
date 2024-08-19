@@ -1,5 +1,5 @@
 body {
-    margin: 20px 0px;
+    margin: 5px 0px;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@ body {
 }
 
 .buttons {
-    margin: 20px 0;
+    margin: 5px 0px;
     display: flex;
     gap: 10px;
 }
@@ -79,6 +79,7 @@ body {
     background: #9694e8;
     font-weight: bolder;
     padding: 5px;
+    margin: 15px 0px;
     box-sizing: border-box;
     text-align: center;
 }
