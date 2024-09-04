@@ -1,0 +1,62 @@
+body {
+    background-image: url('../img/micl_background.png'); /* Укажите правильный путь к изображению */
+    background-size: cover; /* Покрытие фона */
+    /* background-position: center;  Центрирование изображения */
+    height: 100vh; /* Высота на весь экран */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Добавлено для позиционирования кнопок */
+}
+
+.form-container {
+    width: 300px;
+    margin: auto; /* Центрируем форму */
+    position: relative; /* Для позиционирования внутри body */
+    top: 50%; /* Чтобы форма была примерно по центру */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    text-align: center; /* Центрирование контента */
+}
+
+form {
+    /*border: 2px solid red;*/
+    /* background-color: #fff; */
+    padding: 20px 20px 0px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+    opacity: .6;
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    opacity: .8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Кнопка для логина */
+.login-btn {
+    /*margin-top: 10px;*/
+    background-color: #007bff;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
