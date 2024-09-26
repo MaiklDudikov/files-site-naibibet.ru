@@ -33,8 +33,15 @@ body {
     margin: 5px 0; /* Внешний отступ между блоками */
     padding: 5px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left; /* Для выравнивания текста влево */
     font-weight: normal;
+    position: relative; /* Для управления позиционированием кнопки */
+}
+
+img {
+    width: 370px;
+    height: auto;
+    border-radius: 5px;
 }
 
 #winrate {
@@ -67,7 +74,14 @@ body {
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
-    float: right;
+    /*float: right;*/
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 5px; /* Отступ снизу */
+    right: 5px; /* Отступ справа */
+}
+
+p {
+    margin-right: 0; /* Отступ справа для обтекания кнопки 100px */
 }
 
 h5 img {
