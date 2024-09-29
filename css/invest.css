@@ -73,6 +73,14 @@ body {
     background-color: #8f8d89;
 }
 
+.light-red {
+    background-color: #ffb3b3;
+}
+
+.red {
+    background-color: #ff6666;
+}
+
 .examples {
     width: 95%;
     border-radius: 5px;
