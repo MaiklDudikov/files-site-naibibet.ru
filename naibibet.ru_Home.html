@@ -177,41 +177,41 @@
     if (window.location.hash.search('UL_FORM') == -1 && window.location.hash.search('#!') == -1) {
       targetToScrollTo = window.location.hash.replace('#', '');
 
-      // Stop browser from jumping to a selected section.
-      // We perform scrolling manually in the navigation component.
+      // Запретить браузеру переходить к выбранному разделу.
+      // Мы выполняем прокрутку вручную в компоненте навигации.
       //
-      // IE/Edge treats history.replaceState differently.
+      // IE/Edge обрабатывает history.replaceState по-разному.
       var isIE = /(MSIE|Trident\/|Edge\/)/i.test(navigator.userAgent);
       if (isIE) {
         window.location.hash = '';
         history.replaceState(null, null, window.location.href.split('#')[0])
       } else {
         history.replaceState(null, null, window.location.pathname + window.location.search);
-      } 
+      }
     }
   }
 </script>
 
 
-  
 
-  
-    
-  
+
+
+
+
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-aos-enabled="true" class="has-fixed-nav is-banner-out" style="padding-top: 0px;">
-  
 
-  
+
+
     <a class="skip-to-main-content" href="https://naibibetru-ymzi-staging.b12sites.com/#sb-page-structure" style="">
   <span class="skip-to-main-content__text">Skip to main content</span>
 </a>
 
-  
+
 
   <div id="sb-banner" style="visibility: hidden; margin-top: 0px;">
-    
+
 
 
 
@@ -278,58 +278,58 @@
               " style="
               
               ">
-    
-    
+
+
       <div id="sb-id-6260131b-9afc-4cf6-b750-e758eabb6bac" class="sb-column-content ">
-    
+
     <div class="wrapper sb-top-header items-can-collapse" data-sb-uuid="6260131b-9afc-4cf6-b750-e758eabb6bac" id="sb-top-nav-6260131b-9afc-4cf6-b750-e758eabb6bac">
 <a class="sb-top-header__brand brand" href="main_space.html" skip-data-sb="">
-    
+
       naibibet.ru
-    
+
   </a>
-  
+
     <button aria-label="Show navigation" class="sb-mobile-nav-btn" id="sb-mobile-nav-btn" type="button">
 <span class="sb-mobile-nav-btn__line"></span>
 </button>
-  
+
   <nav aria-label="Main" class="sb-top-header__nav sb-nav">
 <button aria-label="Hide navigation" class="sb-nav__close" type="button"></button>
 <ul class="sb-nav__list" id="sb-nav-6260131b-9afc-4cf6-b750-e758eabb6bac">
-      
-        
+
+
           <li class="sb-nav__item   " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="03cf61e0-f1bc-4504-86b2-5fe0f967d074">
 <a class=" sb-link sb-nav__link " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="03cf61e0-f1bc-4504-86b2-5fe0f967d074" href="https://naibibetru-ymzi-staging.b12sites.com/index#home" target="">
               Home
             </a>
-            
+
           </li>
-        
-      
-        
+
+
+
           <li class="sb-nav__item   " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="30cf4624-da5f-41ec-b2e7-b634ad2ea93c">
 <a class=" sb-link sb-nav__link " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="30cf4624-da5f-41ec-b2e7-b634ad2ea93c" href="https://naibibetru-ymzi-staging.b12sites.com/index#about" target="">
               About
             </a>
-            
+
           </li>
-        
-      
-        
+
+
+
           <li class="sb-nav__item   " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="469cb0a0-8f05-4834-9fcf-af7f22b6b2e1">
 <a class=" sb-link sb-nav__link " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="469cb0a0-8f05-4834-9fcf-af7f22b6b2e1" href="https://naibibetru-ymzi-staging.b12sites.com/index#services" target="">
               Services
             </a>
-            
+
           </li>
-        
+
         <li class="sb-nav__item   " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="324fed7d-6baa-4f9a-93c0-9fad1cf8ddb2">
 <a class=" sb-link sb-nav__link " data-component-field="navigationLink" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="324fed7d-6baa-4f9a-93c0-9fad1cf8ddb2" href="https://naibibetru-ymzi-staging.b12sites.com/index#contact" target="">
               Contact
             </a>
-            
+
           </li>
-        
+
 </ul>
 </nav>
 </div>
@@ -345,7 +345,7 @@ $(function () {
       $bannerWrapper = $("#sb-banner"),
       $navigationSection = $("#sb-navigation > .sb-section")
 
-  $navigationWrapper.find('.sb-section').css('transform', 'none'); // fix for when animations are applied
+  $navigationWrapper.find('.sb-section').css('transform', 'none'); // исправление для случаев применения анимаций
 
   $navOpenBtn.on('click', function () {
     $('body').toggleClass('is-nav-menu-expanded');
@@ -370,7 +370,7 @@ $(function () {
   function toggleFixedNavigation () {
     $navigationSection = $("#sb-navigation > .sb-section")
 
-    // TODO: Simplify this in the future
+    // TODO: Упростить это в будущем
     if ($("#sb-id-6260131b-9afc-4cf6-b750-e758eabb6bac").hasClass("option-nav-fixed") || $navigationSection.hasClass("option-nav-fixed")) {
       var $bannerSection = $("#sb-banner > .sb-section")
 
@@ -402,7 +402,7 @@ $(function () {
     }
   }
 
-  // Adjust Hero top padding when nav is overlayed above it
+  // Отрегулируйте верхний отступ героя, когда на него наложена навигация
 function adjustHeroPadding() {
   if (!$navigationSection.hasClass('option-nav-overlay')) return
 
@@ -413,7 +413,7 @@ function adjustHeroPadding() {
     $('body').removeClass('has-overlay-nav')
   } else {
     const navHeight = $navigationSection.outerHeight()
-    const topPadding = navHeight + 20 // Plus default section padding
+    const topPadding = navHeight + 20 // Плюс заполнение раздела по умолчанию
 
     $firstHero.css('paddingTop', `${topPadding}px`);
   }
@@ -431,7 +431,7 @@ adjustHeroPadding()
       adjustHeroPadding()
       toggleFixedNavigation()
 
-      // Properly hide banner on window resize as resizing can adjust banner's height
+      // Правильно скройте баннер при изменении размера окна, так как изменение размера может изменить высоту баннера.
       if (!$navigationSection.hasClass("option-nav-fixed") && $('body').hasClass('is-banner-out')) {
         var $bannerSection = $("#sb-banner")
         $bannerSection.css('margin-top', '-' + $bannerSection.outerHeight() + 'px')
@@ -460,7 +460,7 @@ adjustHeroPadding()
       scrollSpyInitialized = true;
     }
 
-    // Get container scroll position
+    // Получить позицию прокрутки контейнера
     var fromTop = $(this).scrollTop() + topMenuHeight;
 
     // Get id of current scroll item
@@ -470,7 +470,7 @@ adjustHeroPadding()
       }
     });
 
-    // Get the id of the current element
+    // Получить идентификатор текущего элемента
     cur = cur[cur.length - 1];
     var id = cur && cur.length ? cur[0].id : "";
 
@@ -499,7 +499,7 @@ adjustHeroPadding()
     }, 1500);
   }
 
-  // smooth scroll on page load
+  // плавная прокрутка при загрузке страницы
 $(function () {
   if (targetToScrollTo) {
     setTimeout(function () {
@@ -525,7 +525,7 @@ $(function () {
 }
 
 
-  // smooth scroll to section when clicking on nav items
+  // плавная прокрутка к разделу при нажатии на элементы навигации
   var $navLinks = $('.sb-link', $nav),
       pagePath = window.location.pathname.split("/").pop();
 
@@ -569,7 +569,7 @@ $(function () {
     }
   });
 
-  // hide menu items if there is no space for it
+  // скрыть пункты меню, если для них нет места
   var $vlinks = $nav,
       $hlinks = $parent.find('.sb-nav__list-hidden-links'),
       $moreBtn = $parent.find('.sb-nav__list-hidden'),
@@ -582,14 +582,14 @@ $(function () {
       hasContactCTA = false,
       navItemsSelector = '> li:not(.sb-nav__list-hidden)';
 
-  // Exclude the Contact CTA from nav links
+  // Исключить CTA «Связаться» из навигационных ссылок
   var $navItems = $(navItemsSelector, $vlinks);
   if ($navItems.last().hasClass('sb-nav__btn')) {
     hasContactCTA = true;
     navItemsSelector += ':not(:last-child)';
   }
 
-  // If the last nav item is a button, swap it with the More button
+  // Если последний элемент навигации — кнопка, замените ее кнопкой «Дополнительно»
   if (hasContactCTA) {
     $moreBtn.insertBefore($navItems.last());
   }
@@ -623,7 +623,7 @@ $(function () {
     */
     var $firstLink = $(navItemsSelector, $vlinks).first();
     if ($firstLink.length && $firstLink.outerWidth(true) !== breakWidths[0]) {
-      // Delete all dropdown nav items to re-calculate it properly
+      // Удалите все выпадающие элементы навигации, чтобы пересчитать правильно.
       restoreHiddenNavItems($hlinks, $moreBtn);
       var sizes = calculateNavItemsWidth();
       totalSpace = sizes[0];
@@ -648,7 +648,7 @@ $(function () {
 
     var $hiddenNavItems = numOfItems - numOfVisibleItems;
 
-    // If there is the only item in the More dropdown, add one more link there
+    // Если в раскрывающемся списке «Еще» есть только один элемент, добавьте туда еще одну ссылку.
     if (requiredSpace > availableSpace || $hiddenNavItems === 1) {
       $lastLink.addClass('sb-nav__sub-item');
       $('> a', $lastLink).addClass('sb-nav__sub-link');
@@ -660,7 +660,7 @@ $(function () {
       $lastLink.prependTo($hlinks);
       numOfVisibleItems -= 1;
       checkAvailableSpaceForNav();
-    // There is more than enough space
+    // Места более чем достаточно
     } else if (availableSpace > breakWidths[numOfVisibleItems] && $hiddenNavItems !== 2) {
       var $firstLink = $hlinks.children().first();
 
@@ -674,7 +674,7 @@ $(function () {
       $firstLink.insertBefore($moreBtn);
       numOfVisibleItems += 1;
     }
-    // Update the button accordingly
+    // Обновите кнопку соответствующим образом.
     if (numOfVisibleItems === numOfItems) {
       $moreBtn.addClass('is-hidden');
       isMoreButtonHidden = true;
@@ -696,7 +696,7 @@ $(function () {
     }
   }
 
-  // if we are on mobile and option-nav-mobile-static is present
+  // если мы на мобильном устройстве и присутствует option-nav-mobile-static
   var mq = function (query, callback, usePolyfill) {
     var host = {};
     var isMatchMediaSupported = !!(window && window.matchMedia) && !usePolyfill;
@@ -744,9 +744,9 @@ $(function () {
 });
 </script>
 
-    
+
       </div>
-    
+
   </div>
 
 
@@ -819,40 +819,40 @@ $(function () {
               " style="
               
               ">
-    
-    
+
+
       <div id="sb-id-8a7b64ab-1c9c-41b8-ab3e-0f447bc6a503" class="sb-column-content ">
-    
+
     <p>
-  
+
   </p><div class="sb-content sb-hero option-width sb-section-alignable has-sb-hero__paragraph" data-sb-uuid="8a7b64ab-1c9c-41b8-ab3e-0f447bc6a503">
 <div class="sb-hero__content-wrapper">
-      
-        
+
+
           <h1 data-aos="slide-up" data-aos-offset="120" data-aos-delay="0" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-title sb-hero__title aos-init aos-animate" data-component-field="title" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="5f86445c-d7ac-452b-aa81-14188296a3c2">naibibet.ru</h1>
-        
-      
+
+
       <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-subtitle sb-hero__subtitle aos-init aos-animate" data-component-field="subtitle" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="178c43ec-4ac1-4ccb-8057-e55a80747564">Прогнозы от искусственного интеллекта. Сайт, ориентированный на результат и призванный помогать клиентам достигать своих целей.</div>
       <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="100" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-hero__paragraph aos-init aos-animate" data-component-field="paragraph" data-sb-field="text" data-sb-is-link="" data-sb-type="rich-text" data-sb-uuid="bed5c7e8-e702-4c88-a215-a6b612146538"><p></p></div>
     </div>
 <div class="sb-cta-wrapper sb-section-alignable ">
-      
-        
-          
-          
+
+
+
+
             <span data-aos="slide-up" data-aos-offset="120" data-aos-delay="150" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" data-component-field="" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="" class="aos-init aos-animate">
 <a class="sb-cta-wrapper__btn sb-button sb-button--primary" data-component-field="linkRaw" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="6590cea1-4c0c-4a83-b340-6baf0d6fee97" href="bets.html" rel=" " target="">Примеры прогнозов</a>
 </span>
-          
-        
-      
+
+
+
     </div>
 </div>
 
 
-    
+
       </div>
-    
+
   </div>
 
 
@@ -905,31 +905,31 @@ $(function () {
               " style="
               
               ">
-    
-    
+
+
       <div id="sb-id-4e8e6681-b848-488f-b8e1-bce0f8838ef6" class="sb-column-content ">
-    
+
     <p>
 
 </p><div class="sb-text-image sb-section-alignable" data-sb-uuid="4e8e6681-b848-488f-b8e1-bce0f8838ef6">
 <div class="sb-text-image__content option-width">
-    <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="0" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-title sb-text-image__content-title aos-init aos-animate" data-component-field="title" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="b10da2c7-2fcb-4b78-8e30-2b031921508b">Solutions that suit you</div>
-    <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-subtitle sb-text-image__content-subtitle aos-init aos-animate" data-component-field="subtitle" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="75e4a71a-e1cb-4597-bce0-a371c11cc59b">We work collaboratively with our clients to uncover the most effective and efficient way to achieve their needs.</div>
-    <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="100" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-text-image__content-paragraph aos-init aos-animate" data-component-field="paragraph" data-sb-field="text" data-sb-is-link="" data-sb-type="rich-text" data-sb-uuid="5a0e43ae-8cc4-4f13-9f5c-9b398df461d9"><p>At naibibet.ru, we believe there is a better way to meet our clients' needs. We're a company that exists to help you achieve more than you ever thought possible. </p><p>Understanding all the unique touch-points of each client is essential to our business. We focus on building reliable connections, amazing results, and trusted experiences that are as useful as they are memorable.</p><p>Let's do great things together. We can't wait to work with you.</p></div>
-    
+    <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="0" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-title sb-text-image__content-title aos-init aos-animate" data-component-field="title" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="b10da2c7-2fcb-4b78-8e30-2b031921508b">Решения, которые вам подходят</div>
+    <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-subtitle sb-text-image__content-subtitle aos-init aos-animate" data-component-field="subtitle" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="75e4a71a-e1cb-4597-bce0-a371c11cc59b">Мы работаем совместно с нашими клиентами, чтобы найти наиболее эффективный и действенный способ удовлетворения их потребностей.</div>
+    <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="100" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-text-image__content-paragraph aos-init aos-animate" data-component-field="paragraph" data-sb-field="text" data-sb-is-link="" data-sb-type="rich-text" data-sb-uuid="5a0e43ae-8cc4-4f13-9f5c-9b398df461d9"><p>В naibibet.ru мы считаем, что существует лучший способ удовлетворить потребности наших клиентов. Мы — компания, которая существует, чтобы помочь вам достичь большего, чем вы когда-либо считали возможным. </p><p>Понимание всех уникальных точек соприкосновения каждого клиента имеет важное значение для нашего бизнеса. Мы фокусируемся на построении надежных связей, удивительных результатов и доверительных впечатлений, которые столь же полезны, сколь и памятны.</p><p>Давайте делать великие дела вместе. Мы с нетерпением ждем возможности поработать с вами.</p></div>
+
       <div class="sb-text-image__content-cta">
 <div class="sb-cta-wrapper sb-section-alignable ">
-          
-            
-            
+
+
+
               <span data-aos="slide-up" data-aos-offset="120" data-aos-delay="200" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" data-component-field="" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="" class="aos-init aos-animate">
-<a class="sb-cta-wrapper__btn sb-button sb-button--secondary" data-component-field="linkRaw" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="cb13dbdb-cb11-4c6d-bd33-7489eb425664" href="https://naibibetru-ymzi-staging.b12sites.com/index#contact" rel=" " target="">Get in touch</a>
+<a class="sb-cta-wrapper__btn sb-button sb-button--secondary" data-component-field="linkRaw" data-sb-field="" data-sb-is-link="true" data-sb-type="" data-sb-uuid="cb13dbdb-cb11-4c6d-bd33-7489eb425664" href="https://naibibetru-ymzi-staging.b12sites.com/index#contact" rel=" " target="">Связаться с нами</a>
 </span>
-            
-          
+
+
         </div>
 </div>
-    
+
   </div>
 <div data-aos="fade-in" data-aos-offset="120" data-aos-delay="0" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-text-image__image aos-init aos-animate"><figure data-bg="url(https://cdn.b12.io/media/13699364-3cb5-11e8-bbb9-0242ac11000f-jpg-hero_image.jpeg)" class="option-image lazy" data-custom-media-style="acdffdb0-a834-4b73-a4a8-bb84644e17ca" skip-data-sb="" style="background-image: url(&quot;https://cdn.b12.io/media/13699364-3cb5-11e8-bbb9-0242ac11000f-jpg-hero_image.jpeg&quot;);" data-was-processed="true">
 <img alt="breather" loading="lazy" src="./naibibet.ru _ Home_files/13699364-3cb5-11e8-bbb9-0242ac11000f-jpg-hero_image.jpeg">
@@ -977,9 +977,9 @@ $(function() {
 
 
 
-    
+
       </div>
-    
+
   </div>
 
 
@@ -1032,25 +1032,25 @@ $(function() {
               " style="
               
               ">
-    
-    
+
+
       <div id="sb-id-c7b9e84d-04ef-4660-bb54-d94a889f2984" class="sb-column-content ">
-    
+
     <div class="sb-items-grid">
-  
+
     <div class="sb-items-grid__content option-width sb-section-alignable">
-      
+
       <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="0" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-section-title aos-init aos-animate" data-component-field="title" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="fc2fc9ae-10f5-4497-a44b-58b338aa1084">Services</div>
       <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-section-subtitle aos-init aos-animate" data-component-field="subtitle" data-sb-field="text" data-sb-is-link="" data-sb-type="text" data-sb-uuid="46fea1f3-9439-4094-a25c-623e6e20d47a">From our battle-tested process to our reliable client care, we’re here for you</div>
       <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="100" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="sb-paragraph aos-init aos-animate" data-component-field="paragraph" data-sb-field="text" data-sb-is-link="" data-sb-type="rich-text" data-sb-uuid="9825ca09-a0ea-4fd7-bdfd-76da08cd319c"><p></p></div>
     </div>
-  
+
   <ul class="sb-items-grid__items items-grid sb-section-alignable" data-sb-uuid="c7b9e84d-04ef-4660-bb54-d94a889f2984">
-    
+
       <li data-aos="fade-in" data-aos-offset="120" data-aos-delay="0" data-aos-duration="400" data-aos-easing="ease-in-out" data-aos-once="true" class="items-grid__item aos-init aos-animate" skip-data-sb="">
-        
+
         <a aria-label="Read more" class="items-grid__item-body" data-sb-is-link="true" data-sb-uuid="278daa40-7479-47f5-a50e-d40290e0f2b5" href="https://naibibetru-ymzi-staging.b12sites.com/sports-predictions" rel=" " target="">
-          
+
             <div class="items-grid__item-image" skip-data-sb="">
 <figure class="option-image lazy" data-bg="url(&#39;https://cdn.b12.io/client_media/t7m8CLIZ/00986556-8cab-11ef-87c4-0242ac110002-jpg-hero_image.jpeg&#39;)" data-custom-media-style="cf62bb54-3975-4ec7-919a-b24a6ce46424" skip-data-sb="" data-was-processed="true" style="background-image: url(&quot;https://cdn.b12.io/client_media/t7m8CLIZ/00986556-8cab-11ef-87c4-0242ac110002-jpg-hero_image.jpeg&quot;);">
 <img alt="perfectly timed shot while a man is about to lift" loading="lazy" src="./naibibet.ru_Home_files/00d40fc0-8cab-11ef-87c4-0242ac110002-jpg-regular_image.jpeg">

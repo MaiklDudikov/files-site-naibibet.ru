@@ -107,7 +107,7 @@ button {
 
 .main_block {
     position: absolute;
-    top: 110%;
+    top: 115%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
